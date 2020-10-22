@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script defer src="https://d3js.org/d3.v6.min.js"></script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>Coffee Rankings</title>
+    
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  
+  <body>
+    <h1>Coffee House Chains</h1>
+    
+    <p>
+      A ranking of selected leading coffee house chains worldwide
+    </p>
+    
+    <label for="group-by">Group By</label>
+    <select id="group-by" onchange="callUpdate()">
+      <option value="stores">Stores worldwide</option>
+      <option value="revenue">Revenue in billions of U.S. dollars</option>
+    </select>
+    <button class="sort" onclick="callUpdate()">Sort</button>
+    <div class="chart">
+	  <!-- You will append a SVG here-->
+    </div>
+
+  </body>
+</html>
